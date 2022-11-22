@@ -22,7 +22,7 @@ dist: lint
 	tar cjf dist/mqtt_display.tar.bz2 -C .build/apple/Products/Release mqtt_display launchd.template.plist
 
 lint:
-	swiftlint --strict Sources/mqtt_display
+	swiftlint --strict Package.swift Sources
 
 clean:
 	swift package clean
