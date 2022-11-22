@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sroebert/mqtt-nio.git",
       "state" : {
-        "revision" : "373e62cbb6e6059f87e6056b66d9348566aa96ca",
-        "version" : "2.8.0"
+        "revision" : "ad1f0bc339a6df89a28b419cdd452b0df584423d",
+        "version" : "2.8.1"
       }
     },
     {
