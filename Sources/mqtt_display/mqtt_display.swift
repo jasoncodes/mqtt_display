@@ -30,7 +30,7 @@ public struct MqttDisplay {
     }
 
     private static func runAsync(_ command: String, _ arguments: String...) {
-        Task {
+        Task<Void, Never> {
             do {
                 let result = try await Command(execute: command, arguments: arguments).runSync()
                 if result.exitCode != 0 {
