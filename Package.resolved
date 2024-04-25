@@ -62,15 +62,6 @@
         "revision" : "c0d9a144cfaec8d3d596aadde3039286a266c15c",
         "version" : "1.15.0"
       }
-    },
-    {
-      "identity" : "swiftslash",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tannerdsilva/SwiftSlash.git",
-      "state" : {
-        "revision" : "f2ad4e0b7c9ccd414987b6e8339bda02b5fb418e",
-        "version" : "3.3.1"
-      }
     }
   ],
   "version" : 2

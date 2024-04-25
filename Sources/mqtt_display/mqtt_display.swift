@@ -1,7 +1,6 @@
 import AppKit
 import Logging
 import MQTTNIO
-import SwiftSlash
 
 @main
 public struct MqttDisplay {
@@ -32,9 +31,13 @@ public struct MqttDisplay {
     private static func runAsync(_ command: String, _ arguments: String...) {
         Task<Void, Never> {
             do {
-                let result = try await Command(execute: command, arguments: arguments).runSync()
-                if result.exitCode != 0 {
-                    logger.error("exit code \(result.exitCode)", source: command)
+                let task = Process()
+                task.launchPath = command
+                task.arguments = arguments
+                try task.run()
+                task.waitUntilExit()
+                if task.terminationStatus != 0 {
+                    logger.error("exit code: \(task.terminationStatus)", source: command)
                 }
             } catch let error {
                 logger.error("\(error)", source: command)
