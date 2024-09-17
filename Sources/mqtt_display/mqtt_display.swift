@@ -12,7 +12,7 @@ public struct MqttDisplay {
         lazy var url = URL(string: env["MQTT_URL", default: "mqtt://localhost"])!
 
         lazy var hostname = Host.current().localizedName!.lowercased()
-        lazy var clientId = "mqtt_display.\(hostname).\(UUID())"
+        lazy var clientId = "mqtt_display.\(hostname)"
 
         lazy var stateTopic = "\(hostname)/display"
         lazy var commandTopic = "\(hostname)/display/set"
