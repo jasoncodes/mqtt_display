@@ -5,6 +5,7 @@ A little Swift app for macOS which lets you sleep and wake your Mac's display ov
 ## Installation
 
 ```shell
+brew install swiftlint
 make install MQTT_URL=mqtt://…
 ```
 
